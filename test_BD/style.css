@@ -1,0 +1,267 @@
+/* Загальні стилі для тіла сторінки */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Встановлюємо шрифт для всього тіла */
+}
+
+/* Контейнер, який центрує все в середині */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.header {
+    background-image: url('img.jpg');
+    min-height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 20px; 
+}
+
+/* Стилі для заголовка */
+.zagol {
+    color: #11685e;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 
+        -2px -1px 0 #000,
+         2px -1px 0 #000, 
+        -2px  1px 0 #000, 
+         2px  1px 0 #000;
+    margin-bottom: 30px;
+}
+/* Стилі для меню */
+.header-menu ul {
+    list-style-type: none; /* Вимикаємо маркери */
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+}
+
+.header-menu li {
+    display: inline-block; 
+    margin-right: 15px; 
+    text-align: center; 
+}
+
+.menu-item {
+    background-color: #11685e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 22px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: background-color 0.6s ease, transform 0.6s ease; 
+}
+
+.menu-item:hover {
+    background-color: #064d3d; 
+    transform: scale(1.05); 
+}
+
+
+/* Стилі для лінків */
+a {
+    color: #0d9e14;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #0d9e14;
+    border-radius: 5px;
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+a:hover {
+    background-color: #24b427;
+    color: white;
+}
+
+/*Стилі для заголовку на другорядних сторінках сайту */
+.zagol-v2{
+    color: #11685e;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 
+        -1px -1px 0 #000,
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000;
+    margin: 0; /* Видаляємо всі відступи */
+    padding: 0; 
+}
+
+/* Стилі для таблиці */
+table {
+    border-collapse: collapse; /* Відсутність подвійних меж */
+    margin-top: 20px; 
+    width: 100%; 
+    max-width: 1000px; 
+    min-width: 600px;  
+    margin: 0 auto; 
+
+}
+
+tr:nth-child(even) {/*визначаємо стилі для парних рядків таблиці */
+    background-color: #f2f2f2;
+}
+
+/* Стилі для заголовків таблиці */
+th {
+    background-color: #11685e;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000000; 
+}
+
+/* Стилі для рядків таблиці */
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+/* При наведенні на рядки таблиці */
+tr:hover {
+    background-color: #64b2a9;
+}
+
+/* Стилі для кнопок */
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #11685e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Відстань між кнопками */
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0e4d45;
+}
+
+/* Стилі для другорядних кнопок */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+/* Стиль для адаптивного контейнера карточки */
+.card-container {
+    width: auto;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #c9d8d7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Додає горизонтальну прокрутку для великих таблиць */
+}
+/* Стилі для таблиці */
+.table-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; /* Додає горизонтальну прокрутку для самої таблиці */
+}
+.cardv2-container {
+    max-width: 1000px; /* або інша максимальна ширина */
+    margin: 20px auto; /* Центрує картку */
+    background-color: rgba(255, 255, 255, 0.047);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #555;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0.9;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+.delete-button {
+    color: #740000;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #d81212;
+    border-radius: 5px;
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.delete-button:hover {
+    background-color: rgb(229, 18, 18); 
+    transform: scale(1.05);  
+}
+
+.delete-button:active {
+    background-color: rgb(225, 17, 17);  
+}
+
+.select-container {
+    position: relative;
+}
+input, select {
+    width: 20%;  
+    padding: 5px;  
+    font-size: 12px;  
+    margin-bottom: 10px;  
+}
+select {
+    width: 25%;  
+    padding: 5px; 
+}
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.error-message {
+    background-color: #f8d7da; /* Світло-червоний фон */
+    color: #721c24; /* Червоний текст */
+    border: 1px solid #f5c6cb; /* Рамка світло-червоного кольору */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
